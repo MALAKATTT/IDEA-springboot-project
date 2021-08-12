@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(value = "school")
+@ConfigurationProperties(prefix = "school")
 public class School {
 
     private String name;

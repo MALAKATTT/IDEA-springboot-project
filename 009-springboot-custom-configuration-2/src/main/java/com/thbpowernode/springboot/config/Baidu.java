@@ -4,7 +4,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
-@ConfigurationProperties(value = "baidu")
+@ConfigurationProperties(prefix = "baidu")
 public class Baidu {
 
     private String name;
