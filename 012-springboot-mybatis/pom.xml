@@ -31,11 +31,11 @@
         </dependency>
 
         <!--MYSQL驱动-->
-        <!--<dependency>
+        <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.23</version>
-        </dependency>-->
+        </dependency>
 
         <!--mybatis整合Springboot框架的起步依赖-->
         <dependency>
@@ -47,6 +47,16 @@
     </dependencies>
 
     <build>
+        <!--手动指定文件夹为resources-->
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
             <!--Springboot项目编译打包依赖-->
             <plugin>
