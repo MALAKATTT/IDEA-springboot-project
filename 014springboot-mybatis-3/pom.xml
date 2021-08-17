@@ -9,16 +9,14 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.thbpowernode.springboot</groupId>
-    <artifactId>012-springboot-mybatis</artifactId>
+    <artifactId>014springboot-mybatis-3</artifactId>
     <version>1.0.0</version>
-    <name>012-springboot-mybatis</name>
+    <name>014springboot-mybatis-3</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
-        <!--这里修改的是父工程指定的依赖版本-->
     </properties>
     <dependencies>
-        <!--springboot框架web起步依赖-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -43,27 +41,15 @@
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.2.0</version>
         </dependency>
-
     </dependencies>
 
     <build>
-        <!--手动指定文件夹为resources-->
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-        </resources>
-
         <plugins>
-            <!--Springboot项目编译打包依赖-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.5.3</version>
             </plugin>
+
             <!--mybatis 代码自动生成插件-->
             <plugin>
                 <groupId>org.mybatis.generator</groupId>
@@ -75,13 +61,13 @@
                     <verbose>true</verbose>
                     <overwrite>true</overwrite>
                 </configuration>
-                <!--<dependencies>
+                <dependencies>
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
                         <version>5.1.23</version>
                     </dependency>
-                </dependencies>-->
+                </dependencies>
             </plugin>
         </plugins>
     </build>
