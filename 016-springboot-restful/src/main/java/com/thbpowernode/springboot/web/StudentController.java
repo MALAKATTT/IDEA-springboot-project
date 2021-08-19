@@ -40,4 +40,14 @@ public class StudentController {
 
     //以上代码会出现请求代码模糊的错误
     //通常在RESTful风格中方法请求方式会按照增删改查的请求方式来区分
+
+    @DeleteMapping("/student/{id}/detail/{city}")
+    public Object student3(@PathVariable("id") Integer id,
+                           @PathVariable("city") Integer city){
+        Map<String,Object> retMap = new HashMap<>();
+
+        retMap.put("id",id);
+        retMap.put("city",city);
+        return retMap;
+    }
 }
